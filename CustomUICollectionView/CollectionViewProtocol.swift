@@ -6,6 +6,8 @@
 //  Copyright © 2017 Manuel Mouta. All rights reserved.
 //
 
+import UIKit
+
 protocol CollectionViewDelegateVP{
-    
+    func updateCoolectionCellAtIndex(index : Int)->Void
 }

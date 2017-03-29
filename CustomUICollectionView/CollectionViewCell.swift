@@ -9,12 +9,12 @@
 import UIKit
 
 class CollectionViewCell : UICollectionViewCell {
-    @IBOutlet weak var imageProduct: UIImageView!
-    @IBOutlet weak var labelProduct: UILabel!
-    var isDetailShown : Bool = false
+    @IBOutlet weak var imageProduct : UIImageView!
+    @IBOutlet weak var labelProduct : UILabel!
+    var isDetailShown               : Bool = false
     
     func addProductPriceViewToCell(productPrice : Double){
-        ////////////
+        //////////// Console Debug
         let subview = self.contentView.subviews
         DebugHelper.consolePrintValues(values: [subview])
         ////////////
@@ -27,13 +27,14 @@ class CollectionViewCell : UICollectionViewCell {
         viewOverCell.addSubview(label)
         UIView.transition(with: self, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromLeft,
                           animations: {self.contentView.addSubview(viewOverCell)}, completion: nil)
+        //Other Animations
         //UIView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: <#T##CGFloat#>, initialSpringVelocity: <#T##CGFloat#>, options: <#T##UIViewAnimationOptions#>, animations: <#T##() -> Void#>, //completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
     }
     
     func getRandomColor() -> UIColor{
-        let red:CGFloat = CGFloat(drand48())
+        let red:CGFloat   = CGFloat(drand48())
         let green:CGFloat = CGFloat(drand48())
-        let blue:CGFloat = CGFloat(drand48())
+        let blue:CGFloat  = CGFloat(drand48())
         
         return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
     }

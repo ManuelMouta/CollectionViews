@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class CollectionViewPresenter{
     var listOfProducts                 : [Product]?
-    fileprivate var viewDelegate       : CollectionViewDelegateVP?
+    var viewDelegate                   : CollectionViewDelegateVP?
     var modelDelegate                  : ProductDelegateMP?
     var product                        : Product?
     
@@ -30,12 +31,22 @@ class CollectionViewPresenter{
     
 }
 
+//Presenter Provided methods to View
 extension CollectionViewPresenter : CollectionViewDelegatePV{
     
+    func cellAtIndexTapped(cell: CollectionViewCell, index: Int) {
+        let productPrice    = getPriceForProduct(index: index)
+        DebugHelper.consolePrintValues(values: [productPrice ?? 0.0,index])
+        if(!cell.isDetailShown){
+            cell.addProductPriceViewToCell(productPrice: productPrice)
+        }
+        cell.isDetailShown  = true
+        
+    }
+
     func getProductAtIndex(index: Int) -> (String) {
         return (listOfProducts![index].productName!)
     }
-
     
     func getListOfProductsSize() -> Int{
         return (listOfProducts?.count)!
@@ -45,3 +56,5 @@ extension CollectionViewPresenter : CollectionViewDelegatePV{
         return (listOfProducts![index].productPrice!)
     }
 }
+
+

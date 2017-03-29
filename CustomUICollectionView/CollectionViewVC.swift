@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewVC: UIViewController,CollectionViewDelegateVP{
+class CollectionViewVC: UIViewController{
 
     fileprivate var presenter : CollectionViewPresenter?
     var presenterDelegate     : CollectionViewDelegatePV?
@@ -20,6 +20,7 @@ class CollectionViewVC: UIViewController,CollectionViewDelegateVP{
         presenter = CollectionViewPresenter(self){ presenter in
             self.presenterDelegate = presenter
         }
+        presenter?.viewDelegate = self
     }
     
 }
@@ -39,13 +40,7 @@ extension CollectionViewVC : UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell            = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
-        let productPrice    = presenterDelegate?.getPriceForProduct(index: indexPath.row)
-        DebugHelper.consolePrintValues(values: [productPrice ?? 0.0,indexPath.row])
-        if(!cell.isDetailShown){
-            cell.addProductPriceViewToCell(productPrice: productPrice!)
-        }
-        cell.isDetailShown  = true
-    
+        presenterDelegate?.cellAtIndexTapped(cell: cell, index: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -65,6 +60,13 @@ extension CollectionViewVC : UICollectionViewDelegate,UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
+    }
+}
+
+//Methods provided from view to presenter
+extension CollectionViewVC : CollectionViewDelegateVP{
+    func updateCoolectionCellAtIndex(index : Int)->Void{
+        //No need
     }
 }
 
