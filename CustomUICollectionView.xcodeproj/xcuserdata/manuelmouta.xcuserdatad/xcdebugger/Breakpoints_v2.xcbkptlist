@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomUICollectionView/CollectionViewPresenter.swift"
+            timestampString = "512390075.744998"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "CollectionViewPresenter"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomUICollectionView.CollectionViewPresenter.init (view : CustomUICollectionView.CollectionViewDelegateVP, completion : (CustomUICollectionView.CollectionViewDelegatePV) -&gt; ()) -&gt; CustomUICollectionView.CollectionViewPresenter"
+                  moduleName = "CustomUICollectionView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manuelmouta/Desktop/Swift/Tutorial%20apps/CustomUICollectionView/CustomUICollectionView/CollectionViewPresenter.swift"
+                  timestampString = "512390075.761652"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomUICollectionView.CollectionViewPresenter.viewDelegate.getter : Swift.Optional&lt;CustomUICollectionView.CollectionViewDelegateVP&gt;"
+                  moduleName = "CustomUICollectionView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manuelmouta/Desktop/Swift/Tutorial%20apps/CustomUICollectionView/CustomUICollectionView/CollectionViewPresenter.swift"
+                  timestampString = "512390075.764258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomUICollectionView.CollectionViewPresenter.viewDelegate.setter : Swift.Optional&lt;CustomUICollectionView.CollectionViewDelegateVP&gt;"
+                  moduleName = "CustomUICollectionView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manuelmouta/Desktop/Swift/Tutorial%20apps/CustomUICollectionView/CustomUICollectionView/CollectionViewPresenter.swift"
+                  timestampString = "512390075.76577"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "407">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomUICollectionView/CollectionViewCell.swift"
+            timestampString = "512414613.979502"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "addProductPriceViewToCell(productPrice:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
